@@ -1,9 +1,9 @@
 package interfaces
 
 import (
-	"food-app/application"
-	"food-app/domain/entity"
-	"food-app/infrastructure/auth"
+	"api-so-crm/application"
+	"api-so-crm/domain/entity"
+	"api-so-crm/infrastructure/auth"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"

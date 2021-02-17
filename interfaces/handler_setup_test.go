@@ -1,6 +1,6 @@
 package interfaces
 
-import "food-app/utils/mock"
+import "api-so-crm/utils/mock"
 
 var (
 	userApp    mock.UserAppInterface

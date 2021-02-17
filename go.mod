@@ -1,4 +1,4 @@
-module API_SO_CRM
+module api-so-crm
 
 go 1.13
 

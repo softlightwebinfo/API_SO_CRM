@@ -1,8 +1,8 @@
 package application
 
 import (
-	"food-app/domain/entity"
-	"food-app/domain/repository"
+	"api-so-crm/domain/entity"
+	"api-so-crm/domain/repository"
 )
 
 type userApp struct {

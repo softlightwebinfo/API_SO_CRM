@@ -1,11 +1,11 @@
 package main
 
 import (
-	"food-app/infrastructure/auth"
-	"food-app/infrastructure/persistence"
-	"food-app/interfaces"
-	"food-app/interfaces/fileupload"
-	"food-app/interfaces/middleware"
+	"api-so-crm/infrastructure/auth"
+	"api-so-crm/infrastructure/persistence"
+	"api-so-crm/interfaces"
+	"api-so-crm/interfaces/fileupload"
+	"api-so-crm/interfaces/middleware"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"log"

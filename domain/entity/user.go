@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"food-app/infrastructure/security"
+	"api-so-crm/infrastructure/security"
 	"github.com/badoux/checkmail"
 	"html"
 	"strings"

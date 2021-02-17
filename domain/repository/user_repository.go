@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"food-app/domain/entity"
+	"api-so-crm/domain/entity"
 )
 
 type UserRepository interface {

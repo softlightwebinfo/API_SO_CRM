@@ -1,8 +1,8 @@
 package mock
 
 import (
-	"food-app/domain/entity"
-	"food-app/infrastructure/auth"
+	"api-so-crm/domain/entity"
+	"api-so-crm/infrastructure/auth"
 	"mime/multipart"
 	"net/http"
 )

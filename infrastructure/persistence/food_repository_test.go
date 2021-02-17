@@ -1,7 +1,7 @@
 package persistence
 
 import (
-	"food-app/domain/entity"
+	"api-so-crm/domain/entity"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

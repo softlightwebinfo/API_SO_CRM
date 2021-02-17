@@ -2,8 +2,8 @@ package persistence
 
 import (
 	"fmt"
-	"food-app/domain/entity"
-	"food-app/domain/repository"
+	"api-so-crm/domain/entity"
+	"api-so-crm/domain/repository"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 )

@@ -2,9 +2,9 @@ package persistence
 
 import (
 	"errors"
-	"food-app/domain/entity"
-	"food-app/domain/repository"
-	"food-app/infrastructure/security"
+	"api-so-crm/domain/entity"
+	"api-so-crm/domain/repository"
+	"api-so-crm/infrastructure/security"
 	"github.com/jinzhu/gorm"
 	"golang.org/x/crypto/bcrypt"
 	"strings"
