@@ -56,11 +56,12 @@ func (a *App) middleware() {
 	//a.GetApp().Use(middleware.AuthorizeJWT())
 }
 
-func (a *App) Routes(f func(*App)) {
+func (a *App) Routes(f func(*App)) *App {
 	a.app = gin.Default()
 	a.middleware()
 	a.cors()
 	f(a)
+	return a
 }
 
 func (a *App) Start() {

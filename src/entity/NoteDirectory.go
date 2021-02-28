@@ -5,14 +5,15 @@ import (
 	"time"
 )
 
-type NoteDirectory struct {
+type NoteDirectories struct {
 	ORM.Model
 	Title    string `json:"title"`
-	FkUserId uint   `json:"fk_user_id"`
+	FkUserId int64  `json:"fk_user_id"`
 }
 
-func (u *NoteDirectory) BeforeCreate() (err error) {
+func (u *NoteDirectories) BeforeCreate() (err error) {
 	u.CreatedAt = time.Now()
 	u.UpdatedAt = time.Now()
+
 	return
 }

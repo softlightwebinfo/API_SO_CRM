@@ -8,17 +8,24 @@ import (
 )
 
 func main() {
-	app := apps.NewApp()
-	app.Routes(func(app *apps.App) {
-		directoryController := controller.DirectoryController{}
-		authController := controller.LoginController{
-			JWtService:   service.JWTAuthService(),
-			LoginService: service.NewLoginService(),
-		}
-		//ROUTES
-		app.GetApp().GET("/user/directory", middleware.AuthorizeJWT(), directoryController.GetAll())
-		app.GetApp().GET("/user/directory/:id", middleware.AuthorizeJWT(), directoryController.GetAllNotes())
-		app.GetApp().POST("/login", authController.Auth())
-	})
-	app.Start()
+	apps.
+		NewApp().
+		Routes(func(app *apps.App) {
+			directoryController := controller.DirectoryController{}
+			authController := controller.LoginController{
+				JWtService:   service.JWTAuthService(),
+				LoginService: service.NewLoginService(),
+			}
+			//ROUTES
+			app.GetApp().Group("/user/directory").
+				Use(middleware.AuthorizeJWT()).
+				GET("/", directoryController.GetAll()).
+				GET("/:id", directoryController.GetAllNotes()).
+				POST("/", directoryController.CreateDirectory()).
+				POST("/:id", directoryController.CreateNote()).
+				DELETE("/:id/note/:note", directoryController.DeleteNote()).
+				PUT("/:id/note/:note", directoryController.UpdateNote())
+			app.GetApp().POST("/login", authController.Auth())
+		}).
+		Start()
 }

@@ -20,6 +20,10 @@ func (o *ORM) Query() *model.ORMQuery {
 	return &model.ORMQuery{DB: o.db, IsLog: o.log}
 }
 
+func (o *ORM) Mutation() *model.ORMMutation {
+	return &model.ORMMutation{DB: o.db, IsLog: o.log}
+}
+
 func Open(host string, user string, pass string, dbName string, port string) *ORM {
 	psqlInfo := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 		host,

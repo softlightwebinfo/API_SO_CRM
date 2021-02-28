@@ -3,3 +3,13 @@ Accept: application/json
 Authorization: Bearer {{auth_token}}
 
 ###
+
+POST http://{{host}}/user/directory
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "title": "Hola prueba"
+}
+###

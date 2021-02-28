@@ -1,6 +1,6 @@
 package models
 
 type IAuthToken struct {
-	ID    uint
+	Id    int64
 	Email string
 }
