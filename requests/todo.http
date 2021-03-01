@@ -1,0 +1,4 @@
+GET http://{{host}}/user/todo
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+###
